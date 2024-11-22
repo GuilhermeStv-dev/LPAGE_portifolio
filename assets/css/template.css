@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e2ec;
+}
+
+.card {
+    background: linear-gradient(145deg, #fff, #d4d4d8);
+    width: 18rem;
+    height: 25rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: -0.3rem -0.3rem 0.8rem #fff, 0.3rem 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: -0.4rem -0.4rem 1rem #fff, 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card, .profileimage, .fab, .contact-me {
+    box-shadow: -0.1rem -0.1rem 0.3rem #fff, 0.1rem 0.1rem 0.3rem;
+}
+
+.profileimage {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #d4d4d8,#fff);
+    box-shadow: inset -0.2rem -0.2rem 0.5rem #fff, inset 0.2rem 0.2rem 0.5rem rgba(0,0,0, 0.1);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.about {
+    padding-bottom: 0.5rem;
+}
+
+.social_icons {
+    margin: 1rem;
+}
+
+
+.fab {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid darkblue;
+}
+
+.contact-me {
+    background: linear-gradient(145deg, darkblue, blue); /* Gradiente de cores verdes */
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fab:hover {
+    box-shadow: inset -0.1rem -0.1rem 0.3rem #fff,
+    inset 0.1rem 0.1rem 0.3rem #888;
+    cursor: pointer;
+    transform: scale(1.2) rotate(15deg); 
+}
+
+.contact-me:hover {
+    background: linear-gradient(145deg, rgb(43, 43, 255), rgb(99, 99, 255)); /* Tom mais escuro no hover */
+    transform: translateY(-4px); /* Levanta levemente o botão */
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+    .card {
+        width: 95%; /* Quase toda a largura */
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.3rem; /* Reduz o tamanho do título */
+    }
+
+    .about {
+        font-size: 0.9rem; /* Texto menor */
+    }
+
+    .social_icons a {
+        font-size: 1.2rem; /* Ícones menores */
+    }
+
+    .contact-me {
+        font-size: 0.9rem; /* Ajusta tamanho do botão */
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ocupa toda a largura */
+        padding: 0.8rem;
+        border-radius: 0.5rem; /* Bordas menos arredondadas */
+    }
+
+    .profileimage {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        font-size: 0.8rem;
+    }
+
+    .social_icons {
+        flex-direction: column; /* Organiza os ícones verticalmente */
+        gap: 0.5rem;
+    }
+
+    .contact-me {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
